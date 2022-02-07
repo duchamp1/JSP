@@ -47,7 +47,7 @@
 	<form method="POST" action="senyainsert.jsp">
 		<!-- form method="POST" action="InsertServlet" -->
 		<div>
-			<label>書名：<br /> <input type="text" name="title" size="30"
+			<label>書名：<br /> <input type="text" name="title" size="70"
 				maxlength="50" />
 			</label>
 		</div>
