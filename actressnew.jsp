@@ -15,8 +15,29 @@ private String createOption(int start, int end) {
 <meta charset="UTF-8" />
 <title>ACTRESS新規登録</title>
 </head>
+<!-- 必須入力チェック -->
+<!-- https://www.sejuku.net/blog/91384 -->
+<script type="text/javascript">
+    function check(){
+        if (actress.name.value == ""){
+            //条件に一致する場合
+            alert("名前を入力してください");    //エラーメッセージを出力
+            return false;    //送信ボタン本来の動作をキャンセルします
+        }else if(actress.rname.value == ""){
+            alert("本名を入力してください");
+            return false;
+        }else if(actress.office.value == ""){
+            alert("所属事務所を入力してください");
+            return false;
+        }else{
+            //条件に一致しない場合(入力されている場合)
+            return true;    //送信ボタン本来の動作を実行します
+        }
+    }
+</script>
+
 <body>
-<form method="POST" action="actressinsert.jsp">
+<form method="POST" action="actressinsert.jsp" name="actress" onsubmit="return check()">
 <!-- form method="POST" action="actressInsertServlet" -->
 <div>
 	<label>名前：<br />

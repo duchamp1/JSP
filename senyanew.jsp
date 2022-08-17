@@ -43,8 +43,29 @@
 <meta charset="UTF-8" />
 <title>千夜千冊新規登録</title>
 </head>
+<!-- 必須入力チェック -->
+<!-- https://www.sejuku.net/blog/91384 -->
+<script type="text/javascript">
+    function check(){
+        if (senya.title.value == ""){
+            //条件に一致する場合
+            alert("書名を入力してください");    //エラーメッセージを出力
+            return false;    //送信ボタン本来の動作をキャンセルします
+        }else if(senya.auther.value == ""){
+            alert("著者を入力してください");
+            return false;
+        }else if(senya.publisher.value == ""){
+            alert("出版社を入力してください");
+            return false;
+        }else{
+            //条件に一致しない場合(入力されている場合)
+            return true;    //送信ボタン本来の動作を実行します
+        }
+    }
+</script>
+
 <body>
-	<form method="POST" action="senyainsert.jsp">
+	<form method="POST" action="senyainsert.jsp" name="senya" onsubmit="return check()">
 		<!-- form method="POST" action="InsertServlet" -->
 		<div>
 			<label>書名：<br /> <input type="text" name="title" size="70"
