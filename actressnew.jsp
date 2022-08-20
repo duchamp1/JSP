@@ -22,7 +22,7 @@ private String createOption(int start, int end) {
         if (actress.name.value == ""){
             //条件に一致する場合
             alert("名前を入力してください");    //エラーメッセージを出力
-            return false;    //送信ボタン本来の動作をキャンセルします
+            return false;    //登録ボタンをキャンセルします
         }else if(actress.rname.value == ""){
             alert("本名を入力してください");
             return false;
@@ -31,7 +31,7 @@ private String createOption(int start, int end) {
             return false;
         }else{
             //条件に一致しない場合(入力されている場合)
-            return true;    //送信ボタン本来の動作を実行します
+            return true;    //登録ボタンを実行します
         }
     }
 </script>
@@ -112,12 +112,34 @@ private String createOption(int start, int end) {
 </div>
 <div>
 	<label>星座：<br />
-		<select name="star"><%=createOption(1, 12)%></select>
+<%-- 		<select name="star"><%=createOption(1, 12)%></select> --%>
+		<select name="star">
+		  <option value="1" selected>牡羊座</option>
+		  <option value="2">牡牛座</option>
+		  <option value="3">双子座</option>
+		  <option value="4">蟹座</option>
+		  <option value="5">獅子座</option>
+		  <option value="6">乙女座</option>
+		  <option value="7">天秤座</option>
+		  <option value="8">蠍座</option>
+		  <option value="9">射手座</option>
+		  <option value="10">山羊座</option>
+		  <option value="11">水瓶座</option>
+		  <option value="12">魚座</option>
+		</select>
 	</label>
 </div>
 <div>
 	<label>血液型：<br />
-		<select name="blood"><%=createOption(1, 6)%></select>
+<%-- 		<select name="blood"><%=createOption(1, 6)%></select> --%>
+		<select name="blood">
+		  <option value="1" selected>A</option>
+		  <option value="2">B</option>
+		  <option value="3">O</option>
+		  <option value="4">AB</option>
+		  <option value="5">ETC</option>
+		  <option value="6">UNKNOWN</option>
+		</select>
 	</label>
 </div>
 <div>
