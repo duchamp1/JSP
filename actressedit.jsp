@@ -75,7 +75,7 @@ if(rs.next()) {
 </div>
 </form>
 <p>
-<a href="http://localhost:8080/OracleSample/actressselect.jsp">
+<a href="http://localhost:8090/OracleSample/actressselect.jsp">
 戻る
 </a><p>
 </body>
